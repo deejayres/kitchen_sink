@@ -1,9 +1,14 @@
 require_relative 'boot'
 
-require 'rails/all'
+# require 'rails/all'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'active_model/railtie'
+require 'sprockets/railtie'
+require 'rails/test_unit/railtie'
 
 Bundler.require(*Rails.groups)
-require "kitchen_sink"
+require 'kitchen_sink'
 
 module Dummy
   class Application < Rails::Application
@@ -12,4 +17,3 @@ module Dummy
     # -- all .rb files in that directory are automatically loaded.
   end
 end
-

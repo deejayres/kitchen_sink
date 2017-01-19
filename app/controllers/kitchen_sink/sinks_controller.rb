@@ -1,7 +1,5 @@
-require_dependency 'kitchen_sink/application_controller'
-
 module KitchenSink
-  class SinksController < ApplicationController
+  class SinksController < ::ApplicationController
     def sink
       render layout: appropriate_layout
     end

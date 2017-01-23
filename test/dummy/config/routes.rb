@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  mount KitchenSink::Engine => "/kitchen_sink"
+  get 'test', to: 'test#test', as: 'test'
+  get '/asdf/bsdf', to: 'test#test', as: 'asdf'
+  mount KitchenSink::Engine => '/'
 end

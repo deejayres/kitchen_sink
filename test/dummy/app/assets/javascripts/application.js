@@ -15,4 +15,4 @@
 //= require_self
 
 console.log('dummy app trying to initialize foundation');
-$(document).foundation();
+$(function(){ $(document).foundation(); });

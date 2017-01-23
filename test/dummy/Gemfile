@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'foundation'
+gem 'pry'
+gem 'rails'
+gem 'jquery-rails'
 gem 'foundation-rails'
+
+group :development do
+  gem 'web-console'
+  gem 'listen'
+end

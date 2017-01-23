@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//= require jquery
+//= require foundation
+//= require_self
+
+console.log('dummy app trying to initialize foundation');
+$(document).foundation();

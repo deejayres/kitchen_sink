@@ -4,6 +4,7 @@ module KitchenSink
     before_action :forward_all_inherited_url_helpers!
 
     def sink
+      @skip_sections = apply_skip_sections!
       render layout: appropriate_layout
     end
 
@@ -53,9 +54,9 @@ module KitchenSink
     end
 
     def apply_skip_sections!
-      KitchenSink.skip_sections ||= []
+      @skip_sections = []
       skip_sections_param.each do |skip|
-        KitchenSink.skip_sections << skip.to_sym
+        @skip_sections << skip.to_sym
       end
     end
 

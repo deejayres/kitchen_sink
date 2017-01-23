@@ -1,2 +1,3 @@
-<%= render partial: 'basic_html_sink' %>
-<%= render partial: 'foundation_sink' %>
+<% KitchenSink.active_sections(@skip_sections).each do |section| %>
+  <%= render partial: section.to_s %>
+<% end %>
